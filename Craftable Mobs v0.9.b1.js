@@ -1006,7 +1006,7 @@ var cmd = c.split(" ");
 if(cmd[0]=="heads")
 {
 //487-511
-//Player.addItemInventory(486,16);
+Player.addItemInventory(486,16);
 Player.addItemInventory(487,16);
 Player.addItemInventory(488,16);
 Player.addItemInventory(489,16);
