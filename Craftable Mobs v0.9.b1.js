@@ -62,6 +62,13 @@ dog cat zombie_villager
 baby_zombie baby_pigmen zombie_jockey
 */
 
+Block.defineBlock(88,"Soul Sand",[["soul_sand",0],["soul_sand",0],["soul_sand",0],["soul_sand",0]],true,5,0); function modTick() {
+if(getTile(getPlayerX(), getPlayerY()-2, getPlayerZ())==88) {
+Entity.setSneaking(getPlayerEnt(), true);
+} else {
+Entity.setSneaking(getPlayerEnt(), false);
+}
+}
 ModPE.setItem(486,"head_ghast",0,"Ghast");
 ModPE.setItem(487,"head_jockey_spider",0,"Spider Jockey");
 ModPE.setItem(488,"head_mooshroom",0,"Mooshroom");
@@ -109,9 +116,10 @@ Item.addCraftRecipe(505,7,0,[318,4,0,332,4,0,337,1,0]); //Enderman
 Item.addCraftRecipe(506,1,0,[35,1,0,319,1,0]); //ocelot
 Item.addCraftRecipe(507,2,0,[3,3,0,296,3,0]); //villager
 Item.addCraftRecipe(508,4,0,[283,1,0,494,4,0,490,4,0]); //pigmen
-Item.addCraftRecipe(509,1,0,[87,4,0,86,1,0,12, 4, 0]); //wither boss
+Item.addCraftRecipe(509,1,0,[88,6,0,492,3,0]); //wither boss
 Item.addCraftRecipe(510,4,0,[341,8,0]); //slime
 Item.addCraftRecipe(511,4,0,[489,8,0]); //magma cube
+Item.addCraftRecipe(88,1,0,[12,1,0,13,1,0]); //soul sand
 
 function useItem(x, y, z, item, block, side)
 {
